@@ -3,58 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trubači Svilajnac | Orkestar Božidara I Miroslava Mladenovića</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts za vrhunski tipografski izgled -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <title>Trubači Svilajnac</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigacija */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #1a1a1a;
+            border-bottom: 1px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            color: #fff;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #bbb;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        /* Pozovi odmah dugme */
+        .btn-pozovi {
+            background-color: transparent;
+            border: 2px solid #f1c40f;
+            color: #f1c40f;
+            padding: 10px 22px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-pozovi:hover {
+            background-color: #f1c40f;
+            color: #000;
+        }
+
+        /* Naslovna sekcija */
+        .hero {
+            text-align: center;
+            padding: 120px 20px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('slika-pozadina.jpg') no-repeat center center/cover;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            color: #fff;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            color: #ccc;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Opšte sekcije */
+        .sekcija {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-bottom: 1px solid #222;
+        }
+
+        .sekcija h2 {
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+
+        /* O nama - Dve kolone (Slika levo, tekst desno) */
+        .o-nama-grid {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .o-nama-slika {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .o-nama-slika img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .o-nama-tekst {
+            flex: 1.2;
+            min-width: 300px;
+        }
+
+        .o-nama-tekst p {
+            color: #ccc;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        /* Galerija mreža */
+        .galerija-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .galerija-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Kontakt sekcija */
+        .kontakt-sadrzaj {
+            text-align: center;
+        }
+
+        .kontakt-sadrzaj p {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Zaglavlje (Header) -->
-    <header class="site-header">
-        <div class="phone-number">
-            <span class="phone-icon">📞</span> +381 64 138 63 30 | +381 62 701 401
-        </div>
-        <div class="logo">
-            <h2>ORKESTAR BOŽIDARA I MIROSLAVA MLADENOVIĆA</h2>
-        </div>
-        <nav class="nav-menu">
-            <a href="#">Naslovna</a>
-            <a href="#">Nastupi</a>
-            <a href="#">O nama</a>
-            <a href="#">Galerija</a>
-            <a href="#">Kontakt</a>
-            <a href="#" class="btn-reserve">Rezerviši</a>
+    <!-- Gornji meni -->
+    <header>
+        <div class="logo">TRUBAČI SVILAJNAC</div>
+        <nav>
+            <a href="#naslovna">Naslovna</a>
+            <a href="#nastupi">Nastupi</a>
+            <a href="#onama">O nama</a>
+            <a href="#galerija">Galerija</a>
+            <a href="#saveti">Saveti</a>
+            <a href="#novosti">Novosti</a>
+            <a href="#kontakt">Kontakt</a>
         </nav>
+        <a href="tel:+381 62 701 401 | +381 64 138 63 30" class="btn-pozovi">POZOVI ODMAH</a>
     </header>
 
-    <!-- Glavni vizuelni deo (Hero Section) -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>TRUBAČI SVILAJNAC</h1>
-            <p class="hero-subtitle">Trubački orkestar Božidara i Miroslava Mladenovića — profesionalni trubači u Svilajncu za svadbe, rođendane, krštenja i proslave. Brz dogovor, tačan dolazak i repertoar po želji.</p>
-            <div class="hero-buttons">
-                <a href="tel:+381 64 138 63 30 | +381 62 701 401" class="btn-main">POZOVITE & REZERVIŠITE</a>
+    <!-- Naslovna -->
+    <section id="naslovna" class="hero">
+        <h1>TRUBAČI SVILAJNAC</h1>
+        <p>Orkestar za svadbe, rođendane, krštenja i sve vrste proslava. Vrhunska atmosfera i repertoar po vašoj želji.</p>
+        <a href="tel:+3816862701401" class="btn-pozovi" style="padding: 15px 35px; font-size: 1.1rem;">POZOVI ODMAH</a>
+    </section>
+
+    <!-- Nastupi -->
+    <section id="nastupi" class="sekcija">
+        <h2>Nastupi</h2>
+        <p style="text-align: center; color: #aaa;">Ovde naknadno možeš ubaciti video snimke i opise sa nastupa.</p>
+    </section>
+
+    <!-- O nama (Slika levo, tekst desno) -->
+    <section id="onama" class="sekcija">
+        <h2>O NAMA</h2>
+        <div class="o-nama-grid">
+            <div class="o-nama-slika">
+                <!-- Ovde ubaci naziv svoje slike, npr. slika.jpg -->
+                <img src="slika.jpg" alt="Trubači Svilajnac">
+            </div>
+            <div class="o-nama-tekst">
+                <p> Mi smo trubacki orkestar Božidara i Miroslava Mladenovića osnovan 2011. Od te godine smo sa sigurnošću i u ubediljivo među najboljim orkestrina u Srbiji. Za sve to su pokaznice nagrade iz Srbije i Evrope. Prva truba Guče 2006 | Zlatna truba Guče 2011 | Prva truba istočne Srbije 2011, 2014, 2015, 2016 | Najbolja pesma 2012 | Najizvornije muziciralje 2013 | Prva truba dijaspore - Guča u Beču 2015 | Prvi tenor Guče 2014, 2015 | Međunarodno takmičenje Poljska prvo mesto 2015, 2017 | Majstor trube istočne Srbije 2017 |. Za sve od ovih nagrada zaslužno je dvoje ljudi Božidar i Miroslav Mladenović. Božidar Mladenović od 1980. godine stvara čuda u muzici. On je majstor trube istočne Srbije posatao 2017. godine. MI SMO ORKESAR BOZIDARA I MIROSLAVA MJADENOVIĆA I GARANTUJEMO LEPU ATMOSVERU VELIKI REPERTOAR PESAMA I NARODNIH KOLA I BRZ DOGOVOR. </p>
+                <p>Tekst će stajati lepo pored vaše slike, potpuno sređeno i pregledno.</p>
             </div>
         </div>
     </section>
 
-    <!-- Kartice na dnu (Features) -->
-    <section class="features">
-        <div class="feature-card">
-            <div class="feature-badge">✓</div>
-            <h3>BRZ DOGOVOR</h3>
-            <p>Poziv + potvrda termina, bez komplikacija.</p>
+    <!-- Galerija -->
+    <section id="galerija" class="sekcija">
+        <h2>GALERIJA TRUBAČA</h2>
+        <div class="galerija-grid">
+            <div class="galerija-item"><img src="slika1.jpg" alt="Slika 1"></div>
+            <div class="galerija-item"><img src="slika2.jpg" alt="Slika 2"></div>
+            <div class="galerija-item"><img src="slika3.jpg" alt="Slika 3"></div>
         </div>
-        <div class="feature-card">
-            <div class="feature-badge">📍</div>
-            <h3>SRBIJA + REGION</h3>
-            <p>Beograd, gradovi Srbije i region po dogovoru.</p>
-        </div>
-        <div class="feature-card">
-            <div class="feature-badge">⭐</div>
-            <h3>PREMIUM NASTUP</h3>
-            <p>Energično, tačno i bez "praznog hoda".</p>
+    </section>
+
+    <!-- Saveti -->
+    <section id="saveti" class="sekcija">
+        <h2>SAVETI ZA SVADBE I PROSLAVE</h2>
+        <p style="text-align: center; color: #aaa;">Korisni saveti za organizaciju muzike na vašem veselju.</p>
+    </section>
+
+    <!-- Novosti -->
+    <section id="novosti" class="sekcija">
+        <h2>NOVOSTI I OBJAVE</h2>
+        <p style="text-align: center; color: #aaa;">Najnovije vesti i dešavanja vezana za orkestar.</p>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" class="sekcija">
+        <h2>KONTAKT I REZERVACIJA</h2>
+        <div class="kontakt-sadrzaj">
+            <p>Za rezervacije putem telefona. Pozovite nas do kraja godine:</p>
+            <a href="tel:+3816862701401" class="btn-pozovi" style="font-size: 1.2rem; padding: 15px 40px;">+381 62 701 401 | +381 64 138 63 30</a>
         </div>
     </section>
 
