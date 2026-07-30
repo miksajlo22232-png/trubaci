@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trubači Svilajnac</title>
+    <title>Trubački orkestar Božidara i Miroslava Mladenovića Svilajnac</title>
     <style>
         * {
             margin: 0;
@@ -18,7 +18,7 @@
             scroll-behavior: smooth;
         }
 
-        /* Navigacija */
+        /* Navigacija / Meni */
         header {
             display: flex;
             justify-content: space-between;
@@ -33,14 +33,16 @@
 
         .logo {
             font-weight: bold;
-            font-size: 1.1rem;
-            letter-spacing: 1px;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
             color: #fff;
+            max-width: 300px;
+            line-height: 1.3;
         }
 
         nav {
             display: flex;
-            gap: 20px;
+            gap: 15px;
             flex-wrap: wrap;
         }
 
@@ -66,6 +68,8 @@
             font-weight: bold;
             font-size: 0.95rem;
             transition: all 0.3s ease;
+            display: inline-block;
+            white-space: nowrap;
         }
 
         .btn-pozovi:hover {
@@ -77,14 +81,15 @@
         .hero {
             text-align: center;
             padding: 120px 20px;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('slika-pozadina.jpg') no-repeat center center/cover;
+            background-color: #121212;
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 20px;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             color: #fff;
+            line-height: 1.3;
         }
 
         .hero p {
@@ -166,13 +171,47 @@
             color: #ccc;
             margin-bottom: 20px;
         }
+
+        .telefoni-box {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        /* Prilagođavanje za mobilne telefone */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+                text-align: center;
+            }
+            .logo {
+                max-width: 100%;
+            }
+            nav {
+                justify-content: center;
+                gap: 10px;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .sekcija h2 {
+                font-size: 1.8rem;
+            }
+            .o-nama-grid {
+                gap: 25px;
+            }
+        }
     </style>
 </head>
 <body>
 
     <!-- Gornji meni -->
     <header>
-        <div class="logo">TRUBAČI SVILAJNAC</div>
+        <div class="logo">TRUBAČKI ORKESTAR BOŽIDARA I MIROSLAVA MLADENOVIĆA SVILAJNAC</div>
         <nav>
             <a href="#naslovna">Naslovna</a>
             <a href="#nastupi">Nastupi</a>
@@ -187,15 +226,15 @@
 
     <!-- Naslovna -->
     <section id="naslovna" class="hero">
-        <h1>TRUBAČI SVILAJNAC</h1>
-        <p>Orkestar za svadbe, rođendane, krštenja i sve vrste proslava. Vrhunska atmosfera i repertoar po vašoj želji.</p>
-        <a href="tel:+3816862701401" class="btn-pozovi" style="padding: 15px 35px; font-size: 1.1rem;">POZOVI ODMAH</a>
+        <h1>TRUBAČKI ORKESTAR BOŽIDARA I MIROSLAVA MLADENOVIĆA SVILAJNAC</h1>
+        <p>Vrhunski orkestar za svadbe, rođendane, krštenja i sve vrste proslava. Najbolja atmosfera i tradicija.</p>
+        <a href="tel:+381 62 701 401 | +381 64 138 63 30" class="btn-pozovi" style="padding: 15px 35px; font-size: 1.1rem;">POZOVI ODMAH</a>
     </section>
 
     <!-- Nastupi -->
     <section id="nastupi" class="sekcija">
         <h2>Nastupi</h2>
-        <p style="text-align: center; color: #aaa;">Ovde naknadno možeš ubaciti video snimke i opise sa nastupa.</p>
+        <p style="text-align: center; color: #aaa;">...….........…..........</p>
     </section>
 
     <!-- O nama (Slika levo, tekst desno) -->
@@ -203,12 +242,12 @@
         <h2>O NAMA</h2>
         <div class="o-nama-grid">
             <div class="o-nama-slika">
-                <!-- Ovde ubaci naziv svoje slike, npr. slika.jpg -->
+                <!-- Ovde ubaci naziv svoje slike, npr. orkestar.jpg -->
                 <img src="slika.jpg" alt="Trubači Svilajnac">
             </div>
             <div class="o-nama-tekst">
-                <p> Mi smo trubacki orkestar Božidara i Miroslava Mladenovića osnovan 2011. Od te godine smo sa sigurnošću i u ubediljivo među najboljim orkestrina u Srbiji. Za sve to su pokaznice nagrade iz Srbije i Evrope. Prva truba Guče 2006 | Zlatna truba Guče 2011 | Prva truba istočne Srbije 2011, 2014, 2015, 2016 | Najbolja pesma 2012 | Najizvornije muziciralje 2013 | Prva truba dijaspore - Guča u Beču 2015 | Prvi tenor Guče 2014, 2015 | Međunarodno takmičenje Poljska prvo mesto 2015, 2017 | Majstor trube istočne Srbije 2017 |. Za sve od ovih nagrada zaslužno je dvoje ljudi Božidar i Miroslav Mladenović. Božidar Mladenović od 1980. godine stvara čuda u muzici. On je majstor trube istočne Srbije posatao 2017. godine. MI SMO ORKESAR BOZIDARA I MIROSLAVA MJADENOVIĆA I GARANTUJEMO LEPU ATMOSVERU VELIKI REPERTOAR PESAMA I NARODNIH KOLA I BRZ DOGOVOR. </p>
-                <p>Tekst će stajati lepo pored vaše slike, potpuno sređeno i pregledno.</p>
+                <p>Mi smo trubacki orkestar Božidara i Miroslava Mladenovića osnovan 2011. Od te godine smo sa sigurnošću i u ubediljivo među najboljim orkestrina u Srbiji. Za sve to su pokaznice nagrade iz Srbije i Evrope. Prva truba Guče 2006 | Zlatna truba Guče 2011 | Prva truba istočne Srbije 2011, 2014, 2015, 2016 | Najbolja pesma 2012 | Najizvornije muziciralje 2013 | Prva truba dijaspore - Guča u Beču 2015 | Prvi tenor Guče 2014, 2015 | Međunarodno takmičenje Poljska prvo mesto 2015, 2017 | Majstor trube istočne Srbije 2017 |. Za sve od ovih nagrada zaslužno je dvoje ljudi Božidar i Miroslav Mladenović. Božidar Mladenović od 1980. godine stvara čuda u muzici. On je majstor trube istočne Srbije posatao 2017. godine. MI SMO ORKESAR BOZIDARA I MIROSLAVA MJADENOVIĆA I GARANTUJEMO LEPU ATMOSVERU VELIKI REPERTOAR PESAMA I NARODNIH KOLA I BRZ DOGOVOR.</p>
+                <p></p>
             </div>
         </div>
     </section>
@@ -239,8 +278,11 @@
     <section id="kontakt" class="sekcija">
         <h2>KONTAKT I REZERVACIJA</h2>
         <div class="kontakt-sadrzaj">
-            <p>Za rezervacije putem telefona. Pozovite nas do kraja godine:</p>
-            <a href="tel:+3816862701401" class="btn-pozovi" style="font-size: 1.2rem; padding: 15px 40px;">+381 62 701 401 | +381 64 138 63 30</a>
+            <p>Za rezervacije putem telefona. Pozovite nas:</p>
+            <div class="telefoni-box">
+                <a href="tel:+38162701401" class="btn-pozovi" style="font-size: 1.1rem; padding: 15px 30px;">Miroslav: +381 62 701 401</a>
+                <a href="tel:+381641386330" class="btn-pozovi" style="font-size: 1.1rem; padding: 15px 30px;">Božidar: +381 64 138 63 30</a>
+            </div>
         </div>
     </section>
 
